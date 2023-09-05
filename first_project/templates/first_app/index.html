@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-{% load static %}
+{% load staticfiles %}
 <html>
-<head>
-    <title>Django Guitar Page</title>
-    <link rel="stylesheet" href="{% static "css/mystyle.css" %}"/>
-</head>
-<body>
-<h1>Hi, this is a picture of Django himself</h1>
-<p>My first paragraph.</p>
-<img src="{% static "images/djangoguitar.png" %}" alt="Uh oh, didn't show...">
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>DJANGO LEVEL TWO</title>
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>
+    </head>
+    <body>
+        <h1>Hi welcome to Django Level two!</h1>
+        <h2>Here are youre acces records:</h2>
+        <div class="djangotwo">
+            {% if access_records %}
+            <table>
+                <thead>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </thead>
+                {% for acc in access_records %}
+                <tr>
+                    <td> {{ acc.name }}</td>
+                    <td> {{ acc.date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
 </html>
