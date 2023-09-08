@@ -2,8 +2,7 @@ h1{
     color: blue;
 }
 
-.table-container {
-    font-size: 1.5em;
+table, th, td {
     border: 2px solid black;
     color: navy;
     background-color:grey;
