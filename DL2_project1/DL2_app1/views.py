@@ -3,4 +3,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Welcome!\nGo to /users to see the list of user info")
+    return HttpResponse("<em>Welcome!</em><br>Go to /users to see the list of user info")
