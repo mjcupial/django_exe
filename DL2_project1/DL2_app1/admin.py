@@ -1,6 +1,4 @@
 from django.contrib import admin
-from DL2_app1.models import AccessRecord, Topic, Webpage
+from DL2_app1.models import User
 
-admin.site.register(AccessRecord)
-admin.site.register(Topic)
-admin.site.register(Webpage)
+admin.site.register(User)
